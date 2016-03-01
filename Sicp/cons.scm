@@ -1,0 +1,2 @@
+(define (new n)
+  ())

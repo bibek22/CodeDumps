@@ -1,0 +1,6 @@
+#!/usr/bin/python2
+from gi.repository import Gtk
+Gtk.init(None)
+Hello=Gtk.MessageDialog(None, Gtk.DialogFlags.MODAL, Gtk.MessageType.INFO, Gtk.ButtonsType.OK, "Hello world!")
+Hello.format_secondary_text("Here you go sucka!!")
+Hello.run()

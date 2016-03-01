@@ -1,0 +1,6 @@
+#!/usr/bin/env python2
+
+from sys import argv
+name = argv[1]
+age = int(argv[2])
+print "You'll be 100 in ", 100 - age, " years."

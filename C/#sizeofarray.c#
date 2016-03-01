@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(){
+  char string[] = "does this string make me look fat?";
+
+  printf("array\t%u\n",sizeof(string));
+
+/* copy input to output; 1st version */
+  int c;
+
+  c = getchar();
+  while (c != EOF) {
+    putchar(c);
+
+    c = getchar();
+  }
+}

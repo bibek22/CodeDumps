@@ -1,0 +1,31 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+sub printl {
+    print $_[0] . "\n";
+};
+
+# See if the invocation has argument. If it does don't prompt for them agian.
+print $#ARGV . "\n";
+if ($#ARGV <  0){
+print "Enter name of the program: ";
+chomp(my $com = <STDIN>);
+print "\n" ;
+print "And arguments ? : ";
+chomp(my $arg = <STDIN>);
+print "\n" ;
+print "Cut intervals (in sec) ? : ";
+chomp(my $sec = <STDIN>);
+} else {
+    my $com = $ARGV[0];
+    my $arg = $ARGV[1];
+    my $sec = $ARGV[2];
+}
+# Main while loop
+defined(my $pid = fork) or die "cannot fork: #!";
+unless (my $pid){
+    exec "$_[0] $_[1]" ;
+}
+sleep my $sec;
+kill(SIGINT, $pid);
+

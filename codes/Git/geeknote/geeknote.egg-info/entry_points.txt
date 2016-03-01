@@ -1,0 +1,4 @@
+[console_scripts]
+geeknote = geeknote.geeknote:main
+gnsync = geeknote.gnsync:main
+

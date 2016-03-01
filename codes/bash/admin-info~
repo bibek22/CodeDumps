@@ -1,0 +1,8 @@
+#!bin/bash
+pw = $pwd
+cd
+echo date > ~/new.log
+echo  who >> ~/new.log
+echo uptime >> ~/new.log
+cd $pw
+cat new.log

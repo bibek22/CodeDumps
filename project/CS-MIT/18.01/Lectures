@@ -1,0 +1,12 @@
+Content-Type: text/enriched
+Text-Width: 80
+
+* Derivative:
+
+** Geometric interpretation of Derivative.
+
+   Draw a tangent line to the y=f(x) at point p(x_0,y_0)
+
+   So, tangent line is the limit of secand line PQ as Q-->P.
+
+

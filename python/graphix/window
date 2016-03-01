@@ -1,0 +1,40 @@
+#!/usr/bin/python2
+from gi.repository import Gtk
+
+class MainWindow(Gtk.Window):
+    def __init__(self):
+        Gtk.Window.__init__(self, title="Hello world!")
+        # Button
+        self.button = Gtk.Button(label="Click here")
+        self.button.connect("clicked", self.button_clicked)
+
+        self.Label = Gtk.Label()
+        self.Label.set_label("click below for welcome message!")
+        self.Label.set_halign(Gtk.Align.CENTER)
+        # Box
+        self.box = Gtk.Box(spacing=10)
+        self.add(self.box)
+        self.box.pack_start(self.button, True, True, 0)
+        # yes button
+        self.yes_button = Gtk.Button(label="yes")
+        self.yes_button.connect("clicked", self.yes_clicked)
+        self.box.pack_start(self.yes_button, True, True, 0)
+
+        # no button
+        self.no_button = Gtk.Button(label="no")
+        self.no_button.connect("clicked", self.no_clicked)
+        self.box.pack_start(self.no_button, True, True, 0)
+        
+    def yes_clicked(self, widget):
+        print "You clicked yes."
+
+    def no_clicked(self, widget):
+        print "You clicked no."
+
+    def button_clicked(self, widget):
+        print "that is great."
+
+window = MainWindow()
+window.connect("delete-event", Gtk.main_quit)
+window.show_all()
+Gtk.main()
